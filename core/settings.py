@@ -25,8 +25,7 @@ SECRET_KEY = '6f95-8hiubu=g!7zmf#cm6ar!0q0h6tpe!x=1+r-d%lqdg(ue)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['dewi-salon.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dewi-salon.herokuapp.com']
 
 
 # Application definition
