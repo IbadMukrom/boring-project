@@ -1,0 +1,38 @@
+{% extends 'salon/home.html' %}
+
+{% block content %}
+
+    <br>
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-body">
+                <h1 style="text-align: center;">Barang</h1>
+            </div>
+            <div class="card card-body">
+                <table id ="table" class="table table-bordered table-hover">
+                    <thead class="alert-success thead-dark">
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Barang</th>
+                            <th>Jumlah</th>
+                            <th>Harga</th>
+                            <th>Pemakaian</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                    {% for i in barang %}
+                        <tr>
+                            <th scope="row">{{forloop.counter}}</th>
+                            <td>{{i.nama_barang}}</td>
+                            <td>{{i.jumlah}}</td>
+                            <td>Rp {{i.harga}}</td>
+                            <td>{{i.pemakaian}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

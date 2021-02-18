@@ -1,0 +1,38 @@
+{% extends 'salon/home.html' %}
+{% block content %}
+
+    <br>
+    <div class="row">
+        <div class="col-md">
+            <h1 style="text-align: center;">Transaksi</h1>
+             <a class="btn btn-sm btn-success" href="{% url 'tambah-transaksi' %}"> Tambah Transaksi </a>
+            <div class="card card-body">
+                <table id ="table" class="table table-bordered table-hover">
+                    <thead class="alert-success thead-dark">
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pelanggan</th>
+                            <th>Kelamin</th>
+                            <th>Tanggal</th>
+                            <th>Perawatan</th>
+                            <th>Harga</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                    {% for i in trans %}
+                        <tr>
+                            <th scope="row">{{forloop.counter}}</th>
+                            <td>{{i.nama_pelanggan}}</td>
+                            <td>{{i.Kelamin}}</td>
+                            <td>{{i.tanggal}}</td>
+                            <td>{{i.pilih_perawatan}}</td>
+                            <td>Rp, {{i.pilih_perawatan.harga_perawatan}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
