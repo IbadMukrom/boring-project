@@ -25,7 +25,8 @@ SECRET_KEY = '6f95-8hiubu=g!7zmf#cm6ar!0q0h6tpe!x=1+r-d%lqdg(ue)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dewi-salon.herokuapp.com']
+# ALLOWED_HOSTS = ['dewi-salon.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,4 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
