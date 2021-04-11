@@ -10,10 +10,10 @@ def home(request):
     uang_transaksi = Transaksi.objects.aggregate(Sum('pilih_perawatan__harga_perawatan'))['pilih_perawatan__harga_perawatan__sum']
     total_transaksi = Transaksi.objects.all().count()
     data = {
-        'uang_barang': uang_barang,
-        'uang_transaksi': uang_transaksi,
-        'total':total,
-        'total_transaksi':total_transaksi,  
+        'uang_barang' : uang_barang,
+        'uang_transaksi' : uang_transaksi,
+        'total' : total,
+        'total_transaksi': total_transaksi,  
     }
     return render(request,'salon/home.html', data)
 
